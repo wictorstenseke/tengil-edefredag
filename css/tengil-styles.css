@@ -9,16 +9,16 @@ body  {
   width: 100vw;
   margin: 0px;
   
-  /* display: flex;
+  display: flex;
   align-items: center;
-  justify-content: center; */
+  justify-content: center;
 }
 
-.center-content {
+/* .center-content {
   padding: 50px 20px 20px 20px;
   display: block;
   width: 100%;
-}
+} */
 
 .tengil_head {
   display: block;
