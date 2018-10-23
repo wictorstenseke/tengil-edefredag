@@ -15,6 +15,7 @@
   <meta name="theme-color" content="#ffffff">
 
   <link href="https://fonts.googleapis.com/css?family=Amita|Fondamento|Jim+Nightshade|Nanum+Brush+Script|Sedgwick+Ave+Display" rel="stylesheet">
+  <link rel="stylesheet" href="css/css-reset.css">
   <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Pirata+One" rel="stylesheet">
   <link rel="stylesheet" href="css/tengil-styles.css">
 
@@ -23,16 +24,18 @@
   <div class="center-content">
     <img class="tengil_head" src="img/tengil.svg" alt="Tengils head">
     
-    <div class="question">Is it friday yet?</div>
+    <div id="question" class="question"></div>
     
-    <div class="answer">YES!</div>
-    <div class="sub-text">It's fikaday!</div>
+    <div id="answer" class="answer"></div>
+    <div id="sub-text" class="sub-text"></div>
     
     <!-- <div class="answer">NO!</div>
     <div class="sub-text">It's X days left!</div>
     <div class="sub-text">It's weekend?! get out!</div> -->
   </div>
-  <img class="tengil_text" src="img/tengil-text.svg" alt="Tengils logo">
+  <div class="tengil_text">
+    <img  src="img/tengil-text.svg" alt="Tengils logo">
+  </div>
 
   <script src="tengil.js"></script>
 </body>
