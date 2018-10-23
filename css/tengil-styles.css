@@ -79,3 +79,37 @@ body  {
 .tengil-text:img {
   width: 160px;
 }
+
+.flip-container {
+  position: relative;
+  margin: 0 auto;
+  perspective: 1000px;
+  transition: 0.6s;
+	transform-style: preserve-3d;
+}
+
+.flip-container.flipped  {
+  transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+  width: 240px;
+  height: 353px;
+}
+
+
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.front {
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+
+.back {
+	transform: rotateY(180deg);
+}

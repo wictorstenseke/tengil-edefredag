@@ -22,7 +22,16 @@
 </head>
 <body>
   <div class="center-content">
-    <img class="tengil_head" src="img/tengil.svg" alt="Tengils head">
+    <div id="flip-container" class="flip-container">
+        <div class="front" onclick="flip()">
+            <img class="tengil_head" src="img/tengil.svg" alt="Tengils head">
+        </div>
+        <div class="back" onclick="flip()">
+            <img class="tengil_head" src="img/tengil-mirrored.svg" alt="Tengils head mirrored with partyhat">
+            <!-- <img class="tengil_head" src="img/tengil-mirrored-negative.svg" alt="Tengils head mirrored with partyhat"> -->
+            <!-- <img class="tengil_head" src="img/tengil-mirrored-positive.svg" alt="Tengils head mirrored with partyhat"> -->
+        </div>
+    </div>
     
     <div id="question" class="question"></div>
     
@@ -36,7 +45,6 @@
   <div class="tengil_text">
     <img  src="img/tengil-text.svg" alt="Tengils logo">
   </div>
-
   <script src="tengil.js"></script>
 </body>
 </html>
