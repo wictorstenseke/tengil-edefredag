@@ -1,6 +1,6 @@
 window.onload = function() {
 
-    var day =  7;//new Date().getDay();
+    var day =  new Date().getDay();
     var questions = [
         "Is it Friday yet?",
         "What are you doing here?"
@@ -29,6 +29,7 @@ window.onload = function() {
             question.innerHTML = questions[0];
             answer.innerHTML = answers[1];
             subText.innerHTML = subTexts[1];
+            
     
         } else if(day > 5) {
             question.innerHTML = questions[0];
@@ -36,4 +37,12 @@ window.onload = function() {
             subText.innerHTML = subTexts[2];
         }
     }, 1000);
+
+    
 };
+
+function flip() {
+    var flipContainer = document.getElementById("flip-container");
+
+    flipContainer.classList.toggle("flipped");
+}
