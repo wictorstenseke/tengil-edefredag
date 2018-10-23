@@ -8,7 +8,7 @@ window.onload = function() {
     var answers = [
         "NO!",
         "YES!",
-        "It's a weekend!!"
+        "It's the weekend!"
     ];
     var subTexts = [
         "It's {0} days til Friday!",
@@ -18,6 +18,7 @@ window.onload = function() {
     var question = document.getElementById("question");
     var answer = document.getElementById("answer");
     var subText = document.getElementById("sub-text");
+    var spotifyPlayer = document.getElementById("spotify-player");
 
     setTimeout(function () {
         if(day < 5) {
@@ -29,6 +30,7 @@ window.onload = function() {
             question.innerHTML = questions[0];
             answer.innerHTML = answers[1];
             subText.innerHTML = subTexts[1];
+            spotifyPlayer.style.display = "block";
             
     
         } else if(day > 5) {
