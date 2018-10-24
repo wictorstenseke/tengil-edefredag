@@ -1,50 +1,85 @@
-window.onload = function() {
+var question;
+var answer;
+var subText;
+var questions;
+var answers;
+var subTexts;
+var flipContainer;
 
-    var day =  new Date().getDay();
-    var questions = [
+function init() {
+    questions = [
         "Is it Friday yet?",
         "What are you doing here?"
     ];
-    var answers = [
+    answers =[
         "NO!",
         "YES!",
         "It's the weekend!"
     ];
-    var subTexts = [
+    subTexts = [
         "It's {0} days til Friday!",
         "It's Friday! It's fikaday!",
         "Get out!"
     ];
-    var question = document.getElementById("question");
-    var answer = document.getElementById("answer");
-    var subText = document.getElementById("sub-text");
-    var spotifyPlayer = document.getElementById("spotify-player");
+    question = document.getElementById("question");
+    answer = document.getElementById("answer");
+    subText = document.getElementById("sub-text");
+    flipContainer = document.getElementById("flip-container");
+}
 
-    setTimeout(function () {
-        if(day < 5) {
-            question.innerHTML = questions[0];
-            answer.innerHTML = answers[0];
-            subText.innerHTML = subTexts[0].replace("{0}", 5 - day);
-    
-        } else if(day === 5) {
-            question.innerHTML = questions[0];
-            answer.innerHTML = answers[1];
-            subText.innerHTML = subTexts[1];
-            spotifyPlayer.style.display = "block";
-            
-    
-        } else if(day > 5) {
-            question.innerHTML = questions[0];
-            answer.innerHTML = answers[2];
-            subText.innerHTML = subTexts[2];
-        }
-    }, 1000);
+function toggleImages(isFriday) {
+    var positive = document.getElementById("positive");
+    var negative = document.getElementById("negative");
+    var isFlipped = flipContainer.classList.contains("flipped");
 
-    
-};
+    if(isFriday) {
+        isFlipped && flip();
+        negative.classList.add("is-hidden");
+        positive.classList.remove("is-hidden");
+        // flip();
+    } else {
+        isFlipped && flip();
+        negative.classList.remove("is-hidden");
+        positive.classList.add("is-hidden");
+        // flip();
+    }
+}
+
+function setTexts(day) {
+
+    if(day < 5) {
+        question.innerHTML = questions[0];
+        answer.innerHTML = answers[0];
+        subText.innerHTML = subTexts[0].replace("{0}", 5 - day);
+        toggleImages(false);
+
+    } else if(day === 5) {
+        question.innerHTML = questions[0];
+        answer.innerHTML = answers[1];
+        subText.innerHTML = subTexts[1];
+        toggleImages(true);
+
+    } else if(day > 5) {
+        question.innerHTML = questions[0];
+        answer.innerHTML = answers[2];
+        subText.innerHTML = subTexts[2];
+    }
+}
+
+
 
 function flip() {
-    var flipContainer = document.getElementById("flip-container");
-
     flipContainer.classList.toggle("flipped");
 }
+
+function getCurrentDay(){
+    return new Date().getDay();
+}
+
+window.onload = function() {
+    init(); 
+
+    setTexts(getCurrentDay());
+
+    setTimeout(function() { setTexts(getCurrentDay()); }, 1000);
+};
