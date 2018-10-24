@@ -5,6 +5,7 @@ var questions;
 var answers;
 var subTexts;
 var flipContainer;
+var spotifyPlayer;
 
 function init() {
     questions = [
@@ -18,13 +19,14 @@ function init() {
     ];
     subTexts = [
         "It's {0} days til Friday!",
-        "It's Friday! It's fikaday!",
+        "It's Friday! Play some music!",
         "Get out!"
     ];
     question = document.getElementById("question");
     answer = document.getElementById("answer");
     subText = document.getElementById("sub-text");
     flipContainer = document.getElementById("flip-container");
+    spotifyPlayer = document.getElementById("spotify-player");
 }
 
 function toggleImages(isFriday) {
@@ -58,6 +60,7 @@ function setTexts(day) {
         answer.innerHTML = answers[1];
         subText.innerHTML = subTexts[1];
         toggleImages(true);
+        spotifyPlayer.style.display = "block";
 
     } else if(day > 5) {
         question.innerHTML = questions[0];
@@ -65,8 +68,6 @@ function setTexts(day) {
         subText.innerHTML = subTexts[2];
     }
 }
-
-
 
 function flip() {
     flipContainer.classList.toggle("flipped");
