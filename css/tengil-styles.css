@@ -18,15 +18,7 @@ body  {
 }
 
 .primary-text  {
-  /* font-family: 'Nanum Brush Script', cursive; */
-  /* font-family: 'Fondamento', cursive; */
-  /* font-family: 'Amita', cursive; */
-  /* font-family: 'Jim Nightshade', cursive; */
-  /* font-family: 'Sedgwick Ave Display', cursive; */
-  /* font-family: 'Permanent Marker', cursive; */
-  /* font-family: 'Pirata One', cursive; */
   font-family: 'Bangers', cursive;
-  /* font-family: 'Germania One', cursive; */
   margin-top: 40px;
   font-size: 68px;
   color: #641B2B;
@@ -34,14 +26,6 @@ body  {
 }
 
 .answer {
-  /* font-family: 'Nanum Brush Script', cursive; */
-  /* font-family: 'Fondamento', cursive; */
-  /* font-family: 'Amita', cursive; */
-  /* font-family: 'Jim Nightshade', cursive; */
-  /* font-family: 'Sedgwick Ave Display', cursive; */
-  /* font-family: 'Permanent Marker', cursive; */
-  /* font-family: 'Pirata One', cursive; */
-  /* font-family: 'Bangers', cursive; */
   font-family: 'Germania One', cursive;
   color: rgba(255, 255, 255, 0.85);
   margin: 12px auto -34px auto;
