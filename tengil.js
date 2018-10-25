@@ -32,22 +32,18 @@ function init() {
 function toggleImages(isFriday) {
     var positive = document.getElementById("positive");
     var negative = document.getElementById("negative");
-    var isFlipped = flipContainer.classList.contains("flipped");
 
     if(isFriday) {
-        isFlipped && flip();
         negative.classList.add("is-hidden");
         positive.classList.remove("is-hidden");
-        // flip();
     } else {
-        isFlipped && flip();
         negative.classList.remove("is-hidden");
         positive.classList.add("is-hidden");
-        // flip();
     }
 }
 
-function setTexts(day) {
+function setTexts() {
+    var day = getCurrentDay();
 
     if(day < 5) {
         question.innerHTML = questions[0];
@@ -83,5 +79,7 @@ window.onload = function() {
 
     setTexts(getCurrentDay());
 
-    setTimeout(function() { setTexts(getCurrentDay()); }, 1000);
+    setInterval(function() { setTexts(); }, 1000);
+
+    setInterval(function() { flip(); }, 36000000);
 };
