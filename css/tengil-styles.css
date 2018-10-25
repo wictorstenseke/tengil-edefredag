@@ -57,9 +57,10 @@ body  {
   transform: rotateY(180deg);
 }
 
-/* .flip-container, .front, .back {
-  height: 353px;
-} */
+.flip-container, .front, .back {
+  height: 416px;
+  width: 518px;
+}
 
 .front, .back {
 	backface-visibility: hidden;
@@ -84,17 +85,17 @@ body  {
 /* ---- MEDIA QUERIES ---- */
 @media screen and (max-width: 767px) {
   .tengil_head {
-    max-width: 140px;
+    max-width: 250px;
   }
   .flip-container, .front, .back {
-    width: 140px;
-    height: 206px;
+    width: 250px;
+    height: 161px;
   }
   .primary-text {
     font-size: 32px;
   }
   .answer {
-    font-size: 80px;
+    font-size: 80px !important;
   }
 }
 @media screen and (max-width: 1149px) {

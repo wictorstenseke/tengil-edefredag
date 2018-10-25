@@ -65,6 +65,7 @@ function setTexts(day) {
     } else if(day > 5) {
         question.innerHTML = questions[0];
         answer.innerHTML = answers[2];
+        answer.style.fontSize = "160px";
         subText.innerHTML = subTexts[2];
     }
 }
