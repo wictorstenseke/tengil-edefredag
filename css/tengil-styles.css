@@ -11,11 +11,6 @@ body  {
   justify-content: center;
 }
 
-/* .tengil_head {
-  display: block;
-  margin: 0 auto;
-} */
-
 .primary-text  {
   font-family: 'Bangers', cursive;
   margin-top: 40px;
@@ -31,7 +26,6 @@ body  {
   text-align: center;
   font-size: 250px;
   text-transform: uppercase;
-  /* letter-spacing: 2px; */
 }
 
 #spotify-player {
@@ -78,15 +72,12 @@ body  {
 	transform: rotateY(180deg);
 }
 
-.is-hidden{
+.is-hidden {
   display: none;
 } 
 
 /* ---- MEDIA QUERIES ---- */
 @media screen and (max-width: 767px) {
-  .tengil_head {
-    max-width: 250px;
-  }
   .flip-container, .front, .back {
     width: 250px;
     height: 161px;

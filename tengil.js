@@ -37,7 +37,7 @@ function toggleImages(isFriday) {
         negative.classList.add("is-hidden");
         positive.classList.remove("is-hidden");
     } else {
-        negative.classList.remove("is-hidden");
+        negative.classList.remove("is-hidden"); //denna gör att spegelvända Tengil visas eftersom klassen plockas bort alla dagar utom fredag.
         positive.classList.add("is-hidden");
     }
 }
