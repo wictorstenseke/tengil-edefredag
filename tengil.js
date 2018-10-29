@@ -12,7 +12,7 @@ function init() {
         "Is it Friday yet?",
         "What are you doing here?"
     ];
-    answers =[
+    answers = [
         "NO!",
         "YES!",
         "It's the weekend!"
@@ -33,7 +33,7 @@ function toggleImages(isFriday) {
     var positive = document.getElementById("positive");
     var negative = document.getElementById("negative");
 
-    if(isFriday) {
+    if (isFriday) {
         negative.classList.add("is-hidden");
         positive.classList.remove("is-hidden");
     } else {
@@ -45,20 +45,20 @@ function toggleImages(isFriday) {
 function setTexts() {
     var day = getCurrentDay();
 
-    if(day < 5) {
+    if (day < 5) {
         question.innerHTML = questions[0];
         answer.innerHTML = answers[0];
         subText.innerHTML = subTexts[0].replace("{0}", 5 - day);
         toggleImages(false);
 
-    } else if(day === 5) {
+    } else if (day === 5) {
         question.innerHTML = questions[0];
         answer.innerHTML = answers[1];
         subText.innerHTML = subTexts[1];
         toggleImages(true);
         spotifyPlayer.style.display = "block";
 
-    } else if(day > 5) {
+    } else if (day > 5) {
         question.innerHTML = questions[0];
         answer.innerHTML = answers[2];
         answer.style.fontSize = "160px";
@@ -70,16 +70,20 @@ function flip() {
     flipContainer.classList.toggle("flipped");
 }
 
-function getCurrentDay(){
+function getCurrentDay() {
     return new Date().getDay();
 }
 
-window.onload = function() {
-    init(); 
+window.onload = function () {
+    init();
 
     setTexts(getCurrentDay());
 
-    setInterval(function() { setTexts(); }, 1000);
+    setInterval(function () {
+        setTexts();
+    }, 1000);
 
-    setInterval(function() { flip(); }, 36000000);
+    setInterval(function () {
+        flip();
+    }, 36000000);
 };
