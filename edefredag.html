@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,16 +22,17 @@
   <link rel="stylesheet" href="css/tengil-styles.css">
 
 </head>
+
 <body>
   <div class="center-content">
     <div id="flip-container" class="flip-container">
-        <div class="front" onclick="flip()">
-            <img id="main-image" src="img/standard.svg" alt="Tengils head">
-        </div>
-        <div class="back" onclick="flip()">
-            <img id="negative" class="is-hidden" src="img/negative.svg" alt="Tengils head mirrored with sadndess">
-            <img id="positive" class="is-hidden" src="img/positive.svg" alt="Tengils head mirrored with party-mode activated">
-        </div>
+      <div class="front" onclick="flip()">
+        <img id="main-image" src="img/standard.svg" alt="Tengils head">
+      </div>
+      <div class="back" onclick="flip()">
+        <img id="negative" class="is-hidden" src="img/negative.svg" alt="Tengils head mirrored with sadndess">
+        <img id="positive" class="is-hidden" src="img/positive.svg" alt="Tengils head mirrored with party-mode activated">
+      </div>
     </div>
 
     <div id="question" class="primary-text">Is it friday yet?</div>
@@ -38,12 +40,14 @@
     <div id="answer" class="answer"></div>
     <div id="sub-text" class="primary-text"></div>
 
-    <iframe id="spotify-player" src="https://open.spotify.com/embed/user/jojjosunne/playlist/6VRDLpz8oyj9IPEzP5EgpX" width="300" height="77" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    <iframe id="spotify-player" src="https://open.spotify.com/embed/user/jojjosunne/playlist/6VRDLpz8oyj9IPEzP5EgpX"
+      width="300" height="77" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
   </div>
   <div class="tengil_text">
-    <img  src="img/tengil-text.svg" alt="Tengils logo">
+    <img src="img/tengil-text.svg" alt="Tengils logo">
   </div>
   <script src="tengil.js"></script>
 </body>
+
 </html>
