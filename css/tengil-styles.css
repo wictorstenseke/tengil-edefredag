@@ -58,8 +58,8 @@ body {
     width: 518px;
 }
 
-.front,
-.back {
+
+.front, .back {
     backface-visibility: hidden;
     position: absolute;
     top: 0;
@@ -99,6 +99,94 @@ body {
 }
 
 @media screen and (max-width: 1149px) {
+.tengil_text {
+    display: none;
+}
+
+/*
+
+PARTY TENGIL!
+
+*/
+
+.tengil-party {
+    position: relative;
+}
+
+.tengil-party__head {
+    position: absolute;
+    max-width: 250px;
+    top: -30px;
+    left: -12px;
+    z-index: 50;
+}
+
+.tengil-party__body {
+    position: absolute;
+
+}
+.tengil-party--color {
+    animation: rainbow-effect 450ms linear infinite;
+}
+
+.tengil-party--groove {
+    animation: dance-effect 450ms linear infinite;
+}
+
+.tengil-party--groove-color {
+    animation: dance-effect 450ms linear infinite, rainbow-effect 450ms linear infinite;
+}
+
+@keyframes dance-effect {
+    0%, 100% {
+      transform: translate(0%, 0%);
+    }
+
+    20% {
+      transform: translate(12.5%, 12%);
+    }
+
+    40% {
+      transform: translate(25%, 4%);
+    }
+
+    60% {
+      transform: translate(25%, -4%);
+    }
+
+    80% {
+      transform: translate(12.5%, -12%);
+    }
+}
+
+@keyframes rainbow-effect {
+    0%, 100% {
+      fill: #7272E9;
+    }
+
+    20% {
+      fill: #FF19EF;
+    }
+
+    40% {
+      fill: #FFA500;
+    }
+
+    60% {
+      fill: #FFFF00;
+    }
+
+    80% {
+      fill: #80FF00;
+    }
+}
+
+/*
+
+END OF PARTY TENGIL! :/
+
+*/
+
     .tengil_text {
         display: none;
     }
