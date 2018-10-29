@@ -51,9 +51,7 @@ body {
     transform: rotateY(180deg);
 }
 
-.flip-container,
-.front,
-.back {
+.flip-container, .front, .back {
     height: 416px;
     width: 518px;
 }
@@ -79,45 +77,19 @@ body {
     display: none;
 }
 
-/* ---- MEDIA QUERIES ---- */
-@media screen and (max-width: 767px) {
-
-    .flip-container,
-    .front,
-    .back {
-        width: 250px;
-        height: 161px;
-    }
-
-    .primary-text {
-        font-size: 32px;
-    }
-
-    .answer {
-        font-size: 80px !important;
-    }
-}
-
-@media screen and (max-width: 1149px) {
-.tengil_text {
-    display: none;
-}
-
-/*
-
-PARTY TENGIL!
-
-*/
+/* ---- PARTY TENGIL! :/ ---- */
 
 .tengil-party {
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .tengil-party__head {
     position: absolute;
     max-width: 250px;
     top: -30px;
-    left: -12px;
+    left: 100px;
     z-index: 50;
 }
 
@@ -141,19 +113,15 @@ PARTY TENGIL!
     0%, 100% {
       transform: translate(0%, 0%);
     }
-
     20% {
       transform: translate(12.5%, 12%);
     }
-
     40% {
       transform: translate(25%, 4%);
     }
-
     60% {
       transform: translate(25%, -4%);
     }
-
     80% {
       transform: translate(12.5%, -12%);
     }
@@ -163,31 +131,47 @@ PARTY TENGIL!
     0%, 100% {
       fill: #7272E9;
     }
-
     20% {
       fill: #FF19EF;
     }
-
     40% {
       fill: #FFA500;
     }
-
     60% {
       fill: #FFFF00;
     }
-
     80% {
       fill: #80FF00;
     }
 }
 
-/*
+/* ---- END OF PARTY TENGIL! :/ ---- */
 
-END OF PARTY TENGIL! :/
 
-*/
+/* ---- MEDIA QUERIES ---- */
+@media screen and (max-width: 767px) {
+    .flip-container,
+    .front,
+    .back {
+        width: 250px;
+        height: 161px;
+    }
 
+    .primary-text {
+        font-size: 32px;
+    }
+
+    .answer {
+        font-size: 80px !important;
+    }
+}
+
+@media screen and (max-width: 1149px) {
+    .tengil_text {
+        display: none;
+    }
     .tengil_text {
         display: none;
     }
 }
+/* ---- END OF MEDIA QUERIES ---- */
