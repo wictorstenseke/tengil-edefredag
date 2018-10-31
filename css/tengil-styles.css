@@ -83,6 +83,7 @@ body {
     position: relative;
     display: flex;
     justify-content: center;
+    display: none; /* UNTIL IT'S FIXED WITH GOOD FUNCTIONALITY AND POSITION */
 }
 
 .tengil-party__head {
@@ -150,6 +151,9 @@ body {
 
 /* ---- MEDIA QUERIES ---- */
 @media screen and (max-width: 767px) {
+    .tengil-xs {
+        max-width: 250px;
+    }
     .flip-container,
     .front,
     .back {
@@ -164,12 +168,12 @@ body {
     .answer {
         font-size: 80px !important;
     }
+    .tengil-party__head {
+        left: -30px;
+    }
 }
 
 @media screen and (max-width: 1149px) {
-    .tengil_text {
-        display: none;
-    }
     .tengil_text {
         display: none;
     }
