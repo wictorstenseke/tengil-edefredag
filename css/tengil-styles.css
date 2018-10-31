@@ -78,12 +78,12 @@ body {
 }
 
 /* ---- PARTY TENGIL! :/ ---- */
-
-.tengil-party {
+/* ---- UNTIL IT'S FIXED WITH GOOD FUNCTIONALITY AND POSITION ---- */
+/* .tengil-party {
     position: relative;
     display: flex;
     justify-content: center;
-    display: none; /* UNTIL IT'S FIXED WITH GOOD FUNCTIONALITY AND POSITION */
+    display: none; 
 }
 
 .tengil-party__head {
@@ -144,7 +144,7 @@ body {
     80% {
       fill: #80FF00;
     }
-}
+} */
 
 /* ---- END OF PARTY TENGIL! :/ ---- */
 
