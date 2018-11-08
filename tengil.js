@@ -20,7 +20,8 @@ function init() {
     subTexts = [
         "It's {0} days til Friday!",
         "It's Friday! Play some music!",
-        "Get out!"
+        "Get out!",
+        "It's {0} day til Friday!"
     ];
     question = document.getElementById("question");
     answer = document.getElementById("answer");
@@ -48,7 +49,7 @@ function setTexts() {
     if (day < 5) {
         question.innerHTML = questions[0];
         answer.innerHTML = answers[0];
-        subText.innerHTML = subTexts[0].replace("{0}", 5 - day);
+        subText.innerHTML = subTexts[day === 4 ? 3 : 0].replace("{0}", 5 - day);
         toggleImages(false);
 
     } else if (day === 5) {
@@ -85,5 +86,5 @@ window.onload = function () {
 
     setInterval(function () {
         flip();
-    }, 36000000);
+    }, 5000);
 };
