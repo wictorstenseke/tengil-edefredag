@@ -51,6 +51,7 @@ function setTexts() {
         answer.innerHTML = answers[0];
         subText.innerHTML = subTexts[day === 4 ? 3 : 0].replace("{0}", 5 - day);
         toggleImages(false);
+        spotifyPlayer.style.display = "none";
 
     } else if (day === 5) {
         question.innerHTML = questions[0];
@@ -64,6 +65,7 @@ function setTexts() {
         answer.innerHTML = answers[2];
         answer.style.fontSize = "160px";
         subText.innerHTML = subTexts[2];
+        spotifyPlayer.style.display = "none";
     }
 }
 
