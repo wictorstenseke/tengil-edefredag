@@ -28,6 +28,7 @@ function init() {
     subText = document.getElementById("sub-text");
     flipContainer = document.getElementById("flip-container");
     spotifyPlayer = document.getElementById("spotify-player");
+    tengilParty = document.getElementById("tengilParty");
 }
 
 function toggleImages(isFriday) {
@@ -59,6 +60,7 @@ function setTexts() {
         subText.innerHTML = subTexts[1];
         toggleImages(true);
         spotifyPlayer.style.display = "block";
+        tengilParty.style.display = "flex";
 
     } else if (day > 5) {
         question.innerHTML = questions[0];
@@ -68,25 +70,30 @@ function setTexts() {
         spotifyPlayer.style.display = "none";
     }
 }
-
+function toggleFLip() {
+    flip()
+    setTimeout(() => {
+        flip();
+    }, 3000);
+}
 function flip() {
     flipContainer.classList.toggle("flipped");
 }
 
 function getCurrentDay() {
-    return new Date().getDay();
+    return 5;
 }
 
 window.onload = function () {
     init();
 
     setTexts(getCurrentDay());
-
+  
     setInterval(function () {
         setTexts();
     }, 1000);
 
     setInterval(function () {
-        flip();
-    }, 5000);
+        toggleFLip();
+    }, 1000*60*60*1.5);
 };

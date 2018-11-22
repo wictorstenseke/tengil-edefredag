@@ -56,7 +56,6 @@ body {
     width: 518px;
 }
 
-
 .front, .back {
     backface-visibility: hidden;
     position: absolute;
@@ -79,18 +78,19 @@ body {
 
 /* ---- PARTY TENGIL! :/ ---- */
 /* ---- UNTIL IT'S FIXED WITH GOOD FUNCTIONALITY AND POSITION ---- */
-/* .tengil-party {
+#tengilParty {
     position: relative;
     display: flex;
     justify-content: center;
-    display: none; 
+    margin-top: 32px;
+    display: none;
 }
 
 .tengil-party__head {
     position: absolute;
     max-width: 250px;
     top: -30px;
-    left: 100px;
+    left: 205px;
     z-index: 50;
 }
 
@@ -115,16 +115,16 @@ body {
       transform: translate(0%, 0%);
     }
     20% {
-      transform: translate(12.5%, 12%);
+      transform: translate(6%, 6%);
     }
     40% {
-      transform: translate(25%, 4%);
+      transform: translate(12.5%, 4%);
     }
     60% {
-      transform: translate(25%, -4%);
+      transform: translate(12.5%, -4%);
     }
     80% {
-      transform: translate(12.5%, -12%);
+      transform: translate(6%, -6%);
     }
 }
 
@@ -144,7 +144,7 @@ body {
     80% {
       fill: #80FF00;
     }
-} */
+}
 
 /* ---- END OF PARTY TENGIL! :/ ---- */
 
