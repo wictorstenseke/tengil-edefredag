@@ -81,7 +81,7 @@ function flip() {
 }
 
 function getCurrentDay() {
-    return 5;
+    return new Date().getDay();
 }
 
 window.onload = function () {
