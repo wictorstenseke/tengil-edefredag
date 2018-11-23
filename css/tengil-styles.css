@@ -80,7 +80,6 @@ body {
 /* ---- UNTIL IT'S FIXED WITH GOOD FUNCTIONALITY AND POSITION ---- */
 #tengilParty {
     position: relative;
-    display: flex;
     justify-content: center;
     margin-top: 32px;
     display: none;
